@@ -16,11 +16,16 @@ news: false
 social: true
 ---
 
-I am a Doctoral Assistant in [Data-Intensive Application and Systems (DIAS) Laboratory](https://www.epfl.ch/labs/dias/){:target="\_blank"} of [School of Computer and Communication Sciences, EPFL](https://www.epfl.ch/schools/ic/){:target="\_blank"}.
+I am a Doctoral Assistant in [Data-Intensive Application and Systems (DIAS) Laboratory](https://www.epfl.ch/labs/dias/){:target="\_blank"} of [School of Computer and Communication Sciences, EPFL](https://www.epfl.ch/schools/ic/){:target="\_blank"}, supervised by [Prof. Anastasia Ailamaki](https://people.epfl.ch/anastasia.ailamaki?lang=en){:target="\_blank"}.  
 
-My research is in the area of data management systems, focusing on high-performance and scalable database architectures running complex hybrid transactional/analytical processing (HTAP), and modern and heterogeneous hardware (GPUs, SmartSSD, SmartNIC).
+My research is in the area of __*data management systems*__, focusing on high-performance, scalable and adaptive database system designs running complex __*hybrid transactional/analytical processing (HTAP)*__ workloads, and __*modern hardware*__ such as GPUs for query acceleration, SmartSSDs for near-data processing, SmartNICs to enable in-line data aggregation and routing.
+
+My vision is to enable truly scalable data processing while taming heterogeneities in workload, data and underlying hardware infrastructure through __*just-in-time (JIT) engines*__ and provide runtime adaptivity and tight performance bounds.
 
 <!-- Before joining BU I was a Research Associate at Harvard University. From 2014-2017 I was a Postdoctoral Researcher at Harvard University in the Data Systems Lab with Stratos Idreos, where I was supported by a SNSF Postdoc Mobility Fellowship. I received my PhD (2014) from EPFL, where I worked in the Data-Intensive Applications and Systems Lab on studying data systems architectures for analytics exploiting new storage hardware with Anastasia Ailamaki. I obtained my MSc (2008) in Computer Systems Technology, and BSc (2005) in Informatics and Telecommunications from the University of Athens, Greece. I have also been at IBM Research as a PhD Intern in 2011, and a junior researcher in the University of Athens and the National Technical University of Athens. -->
+
+
+I can speak/write/listen in English (fluent), French (beginner), Urdu (mother tongue) and C++. 
 
 
 Outside of the office I enjoy travelling and driving across cities.
