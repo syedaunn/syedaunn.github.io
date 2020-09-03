@@ -50,7 +50,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 
 
-You can download my [CV here](/assets/pdf/cv.pdf){:target="\_blank"}.   
+You can download my [CV here](/assets/pdf/Aunn_CV_Academic.pdf){:target="\_blank"}.   
 *Last updated: September 05, 2020.*
 
 <!-- During my academic career I have spent time at University of Athens, Greece (B.Sc.) and EPFL, Switzerland (M.Sc., Ph.D.). Professionally, I have been employed by Microsoft, Microsoft Research, Credit Suisse, and Nexthink. I am the recipient of an EPFL PhD Fellowship and an EPFL teaching excellence award.  -->
