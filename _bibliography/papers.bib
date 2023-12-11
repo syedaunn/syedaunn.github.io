@@ -3,82 +3,165 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{nicholson2023chaosity,
+  title={Chaosity: Understanding Contemporary NUMA-architectures},
+  author={Nicholson, Hamish and Nica, Andreea and Raza, Aunn and Sanca, Viktor and Ailamaki, Anastasia},
+  booktitle={Fifteenth TPC Technology Conference on Performance Evaluation \& Benchmarking (TPCTC 2023)},
+  year={2023},
+  html={https://infoscience.epfl.ch/record/305948/files/TPCTC23___Making_Sense_of_Chaos___Understanding_Contemporary_NUMA_architectures-5.pdf},
+  abbr={TPCTC 23},
+  type={WORKSHOP},
+  abstract={Modern hardware is increasingly complex, requiring increasing effort to understand in order to carefully engineer systems for optimal performance and effective utilization. Moreover, established design principles and assumptions are not portable to modern hardware because: 1) Non-Uniform Memory Access (NUMA) architectures are becoming increasingly complex and diverse across CPU vendors; Chiplet-based architecture provides hierarchical NUMA instead of flat-NUMA topology, while heterogeneous compute cores (e.g., Apple Silicon) and on-chip accelerators (e.g., Intel sapphire rapids) are also normalized in materializing the vision for workload- and requirement-specific compute scheduling. 2) Increasing IO bandwidth (e.g., arrays of NVMe drives approaching memory bandwidth) is a double-edged sword; having high-bandwidth IO can interfere with the concurrent memory access bandwidth as the IO target is also memory; hence IO itself consumes memory bandwidth. 3) Interference modeling is becoming more complex in modern hierarchical NUMA and on-chip heterogeneous architectures due to topology obliviousness. Therefore, systems designs need to be hardware topology-aware, which requires understanding the bottlenecks and data flow characteristics, and then adapting scheduling over the given hardware topology.
+  
+  Modern hardware promises performance by providing powerful and complex yet non-intuitive computing models which require tuning specifically for target hardware or risk under-utilizing the hardware. Therefore, system designers need to understand, carefully engineer, and adapt to the target hardware to avoid unnecessarily hitting bottlenecks in the hardware topology. In this paper, we propose the Chaosity framework, which enables system designers to systematically analyze, benchmark, and understand complex system topologies, their bandwidth characteristics, and interference of effects of data access paths, including memory and PCIe-based IO. Chaosity aims to provide critical insights into system designs and workload schedulers for modern NUMA hierarchies.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@article{DBLP:journals/pacmmod/RazaCAA23,
+  author       = {Aunn Raza and
+                  Periklis Chrysogelos and
+                  Angelos{-}Christos G. Anadiotis and
+                  Anastasia Ailamaki},
+  title        = {One-shot Garbage Collection for In-memory {OLTP} through Temporality-aware
+                  Version Storage},
+  journal      = {Proc. {ACM} Manag. Data},
+  volume       = {1},
+  number       = {1},
+  pages        = {19:1--19:25},
+  year         = {2023},
+  url          = {https://doi.org/10.1145/3588699},
+  doi          = {10.1145/3588699},
+  timestamp    = {Thu, 15 Jun 2023 21:57:48 +0200},
+  biburl       = {https://dblp.org/rec/journals/pacmmod/RazaCAA23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  html={https://doi.org/10.1145/3588699},
+  abbr={SIGMOD 23},
+  type={CONFERENCE},
+  abstract={Most modern in-memory online transaction processing (OLTP) engines rely on multi-version concurrency control (MVCC) to provide data consistency guarantees in the presence of conflicting data accesses. MVCC improves concurrency by generating a new version of a record on every write, thus increasing the storage requirements. Existing approaches rely on garbage collection and chain consolidation to reduce the length of version chains and reclaim space by freeing unreachable versions. However, finding unreachable versions requires the traversal of long version chains, which incurs random accesses right into the critical path of transaction execution, hence limiting scalability.
+  
+  This paper introduces OneShotGC, a new multi-version storage design that eliminates version traversal during garbage collection, with minimal discovery and memory management overheads. OneShotGC leverages the temporal correlations across versions to opportunistically cluster them into contiguous memory blocks that can be released in one shot. We implement OneShotGC in Proteus, and use YCSB and TPC-C to experimentally evaluate its performance with respect to the state-of-the-art, where we observe an improvement of up to 2x in transactional throughput.}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
+@inproceedings{DBLP:conf/cidr/NicholsonRCA23,
+  author       = {Hamish Nicholson and
+                  Aunn Raza and
+                  Periklis Chrysogelos and
+                  Anastasia Ailamaki},
+  title        = {HetCache: Synergising NVMe Storage and {GPU} acceleration for Memory-Efficient
+                  Analytics},
+  booktitle    = {13th Conference on Innovative Data Systems Research, {CIDR} 2023,
+                  Amsterdam, The Netherlands, January 8-11, 2023},
+  publisher    = {www.cidrdb.org},
+  year         = {2023},
+  url          = {https://www.cidrdb.org/cidr2023/papers/p84-nicholson.pdf},
+  timestamp    = {Sun, 06 Aug 2023 20:52:19 +0200},
+  biburl       = {https://dblp.org/rec/conf/cidr/NicholsonRCA23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  html={https://www.cidrdb.org/cidr2023/papers/p84-nicholson.pdf},
+  abbr={CIDR 23},
+  type={CONFERENCE},
+  abstract={Accessing input data is a critical operation in data analytics: i) slow data access significantly degrades performance, and ii) storing everything in the fastest medium, i.e., memory, incurs high operational and hardware costs. Further, while GPUs offer increased analytical performance, equipping them with correspondingly fast memory requires even more expensive memory technologies than DRAM; making memory resources even more precious. Existing GPU-accelerated engines rely on CPU memory for bigger working sets, albeit at the expense of slower execution. Such a combination of both memory and compute disaggregation, however, invalidates the assumption of existing caching mechanisms: i) the processing tier is highly heterogeneous, ii) data access bandwidth depends on the access method and compute unit, iii) with NVMe arrays, persistent storage can approach in-memory bandwidth, and iv) all these relative quantities depend on the current query and data placement. Thus, existing caching approaches waste interconnect bandwidth, cache inefficiently, and overall result in suboptimal execution times.
+  This work proposes HetCache, a storage engine for analytical workloads that optimizes the data access paths and tunes data placement by co-optimizing for the combinations of different memories, compute devices, and queries. Specifically, we present how the increasingly complex storage hierarchy impacts analytical query processing in GPU-NVMe-accelerated servers. HetCache accelerates analytics on CPU-GPU servers for larger-than-memory datasets through proportional and access-path-aware data placement. Our prototype implementation of HetCache demonstrates a 1.14x-1.78x speedup of GPU-only execution on NVMe resident data and achieves near in-system-memory performance for hybrid CPU-GPU execution, while substantially improving memory efficiency. Overall, HetCache turns the multi-memory-node nature of such heterogeneous servers from a burden into a performance booster.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@inproceedings{DBLP:conf/sigmod/RazaCAA20,
+  author    = {Aunn Raza and
+               Periklis Chrysogelos and
+               Angelos{-}Christos G. Anadiotis and
+               Anastasia Ailamaki},
+  editor    = {David Maier and
+               Rachel Pottinger and
+               AnHai Doan and
+               Wang{-}Chiew Tan and
+               Abdussalam Alawini and
+               Hung Q. Ngo},
+  title     = {Adaptive {HTAP} through Elastic Resource Scheduling},
+  booktitle = {Proceedings of the 2020 International Conference on Management of
+               Data, {SIGMOD} Conference 2020, online conference [Portland, OR, USA],
+               June 14-19, 2020},
+  pages     = {2043--2054},
+  publisher = {{ACM}},
+  year      = {2020},
+  url       = {https://doi.org/10.1145/3318464.3389783},
+  doi       = {10.1145/3318464.3389783},
+  timestamp = {Fri, 21 Aug 2020 17:36:54 +0200},
+  biburl    = {https://dblp.org/rec/conf/sigmod/RazaCAA20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  html={https://infoscience.epfl.ch/record/276997},
+  pdf={adaptive-htap-technical-report.pdf},
+  abbr={SIGMOD 20},
+  type={CONFERENCE},
+  abstract = {Modern Hybrid Transactional/Analytical Processing (HTAP) systems use an integrated data processing engine that performs analytics on fresh data, which are ingested from a transactional engine. HTAP systems typically consider data freshness at design time, and are optimized for a fixed range of freshness requirements, addressed at a performance cost for either OLTP or OLAP. The data freshness and the performance requirements of both engines, however, may vary with the workload. We approach HTAP as a scheduling problem, addressed at runtime through elastic resource management. We model an HTAP system as a set of three individual engines: an OLTP, an OLAP and a Resource and Data Exchange (RDE) engine. We devise a scheduling algorithm which traverses the HTAP design spectrum through elastic resource management, to meet the workload data freshness requirements. We propose an in-memory system design which is non-intrusive to the current state-of-art OLTP and OLAP engines, and we use it to evaluate the performance of our approach. Our evaluation shows that the performance benefit of our system for OLAP queries increases over time, reaching up to 50% compared to static schedules for 100 query sequences, while maintaining a small, and controlled, drop in the OLTP throughput.}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{DBLP:conf/cidr/RazaCSIAA20,
+  author    = {Aunn Raza and
+               Periklis Chrysogelos and
+               Panagiotis Sioulas and
+               Vladimir Indjic and
+               Angelos{-}Christos G. Anadiotis and
+               Anastasia Ailamaki},
+  title     = {GPU-accelerated data management under the test of time},
+  booktitle = {{CIDR} 2020, 10th Conference on Innovative Data Systems Research,
+               Amsterdam, The Netherlands, January 12-15, 2020, Online Proceedings},
+  publisher = {www.cidrdb.org},
+  year      = {2020},
+  url       = {http://cidrdb.org/cidr2020/papers/p18-raza-cidr20.pdf},
+  timestamp = {Thu, 12 Mar 2020 11:32:37 +0100},
+  biburl    = {https://dblp.org/rec/conf/cidr/RazaCSIAA20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  html={https://infoscience.epfl.ch/record/277001},
+  pdf={p18-raza-cidr20.pdf},
+  abbr={CIDR 20},
+  type={CONFERENCE},
+  abstract = {GPUs are becoming increasingly popular in large scale data center installations due to their strong, embarrassingly parallel, processing capabilities. Data management systems are riding the wave by using GPUs to accelerate query execution, mainly for analytical workloads. However, this acceleration comes at the price of a slow interconnect which imposes strong restrictions in bandwidth and latency when bringing data from the main memory to the GPU for processing. The related research in data management systems mostly relies on late materialization and data sharing to mitigate the overheads introduced by slow interconnects even in the standard CPU processing case. Finally, workload trends move beyond analytical to fresh data processing, typically referred to as Hybrid Transactional and Analytical Processing (HTAP). Therefore, we experience an evolution in three different axes: interconnect technology, GPU architecture, and workload characteristics. In this paper, we break the evolution of the technological landscape into steps and we study the applicability and performance of late materialization and data sharing in each one of them. We demonstrate that the standard PCIe interconnect substantially limits the performance of state-of-the-art GPUs and we propose a hybrid materialization approach which combines eager with lazy data transfers. Further, we show that the wide gap between GPU and PCIe throughput can be bridged through efficient data sharing techniques. Finally, we provide an H2TAP system design which removes software-level interference and we show that the interference in the memory bus is minimal, allowing data transfer optimizations as in OLAP workloads.}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{DBLP:conf/usenix/IorgulescuDRHZ17,
+  author    = {Calin Iorgulescu and
+               Florin Dinu and
+               Aunn Raza and
+               Wajih Ul Hassan and
+               Willy Zwaenepoel},
+  editor    = {Dilma Da Silva and
+               Bryan Ford},
+  title     = {Don't cry over spilled records: Memory elasticity of data-parallel
+               applications and its application to cluster scheduling},
+  booktitle = {2017 {USENIX} Annual Technical Conference, {USENIX} {ATC} 2017, Santa
+               Clara, CA, USA, July 12-14, 2017},
+  pages     = {97--109},
+  publisher = {{USENIX} Association},
+  year      = {2017},
+  url       = {https://www.usenix.org/conference/atc17/technical-sessions/presentation/iorgulescu},
+  timestamp = {Mon, 16 Jul 2018 15:47:23 +0200},
+  biburl    = {https://dblp.org/rec/conf/usenix/IorgulescuDRHZ17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  html={https://www.usenix.org/conference/atc17/technical-sessions/presentation/iorgulescu},
+  abbr={USENIX ATC},
+  type={CONFERENCE}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+@article{DBLP:journals/access/UsamaQRAYEHA19,
+  author    = {Muhammad Usama and
+               Junaid Qadir and
+               Aunn Raza and
+               Hunain Arif and
+               Kok{-}Lim Alvin Yau and
+               Yehia Elkhatib and
+               Amir Hussain and
+               Ala I. Al{-}Fuqaha},
+  title     = {Unsupervised Machine Learning for Networking: Techniques, Applications
+               and Research Challenges},
+  journal   = {{IEEE} Access},
+  volume    = {7},
+  pages     = {65579--65615},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/ACCESS.2019.2916648},
+  doi       = {10.1109/ACCESS.2019.2916648},
+  timestamp = {Fri, 27 Dec 2019 21:13:24 +0100},
+  biburl    = {https://dblp.org/rec/journals/access/UsamaQRAYEHA19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  html={https://ieeexplore.ieee.org/document/8713992},
+  abbr={IEEE ACCESS},
+  type={JOURNAL}
 }
+

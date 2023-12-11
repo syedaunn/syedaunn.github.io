@@ -32,3 +32,30 @@
 "Planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+"Chrysogelos":
+  - firstname: ["Periklis", "P."]
+    url: https://scholar.google.ch/citations?user=l42PD_MAAAAJ&hl=en
+
+"Sioulas":
+  - firstname: ["Panagiotis", "P."]
+    url: https://scholar.google.ch/citations?user=1iw35RwAAAAJ&hl=en
+
+"Ailamaki":
+  - firstname: ["Anastasia", "A."]
+    url: https://scholar.google.ch/citations?user=YdrkeNwAAAAJ&hl=en
+
+"Zwaenepoel":
+  - firstname: ["Willy", "W."]
+    url: https://scholar.google.ch/citations?user=KfI_FL4AAAAJ&hl=en    
+
+"Anadiotis":
+  - firstname: ["Angelos", "A.", "A. C.", "Angelos-Christos", "Angelos-Christos G."]
+    url: https://scholar.google.ch/citations?user=RU6JiOEAAAAJ&hl=en
+"Sanca":
+  - firstname: ["Viktor", "V."]
+    url: https://www.viktorsanca.com
+
+"Nicholson":
+  - firstname: ["Hamish", "H."]
+    url: https://www.nicholson.ai

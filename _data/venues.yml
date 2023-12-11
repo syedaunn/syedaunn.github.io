@@ -2,5 +2,25 @@
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"TPCTC 23":
+  url: https://www.tpc.org/tpctc/tpctc2023/default5.asp
+
+"SIGMOD 23":
+  url: http://2023.sigmod.org
+
+"CIDR 23":
+  url: https://www.cidrdb.org/cidr2023
+
+"SIGMOD 20":
+  url: https://sigmod2020.org
+"CIDR 20":
+  url: https://www.cidrdb.org/cidr2020
+"USENIX ATC":
+  url: https://www.usenix.org/conference/atc17
+"IEEE ACCESS":
+  url: https://ieeeaccess.ieee.org
+
+
+
+
+

@@ -2,11 +2,25 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Teaching and related experiences.
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+## __Teaching Assitant at EPFL__
 
-Organize your courses by years, topics, or universities, however you like!
+- __CS460 - Systems for Data Management and Data Science__
+	- Spring 2023
+
+- __CS422 - Database Systems__
+	- Spring 2022
+	- Spring 2021
+	- Spring 2020
+
+- __CS322 - Introduction to Database Systems__
+	- Spring 2019
+
+- __COM208 - Computer Networks__
+	- Fall 2021
+	- Fall 2020
+	- Fall 2019
